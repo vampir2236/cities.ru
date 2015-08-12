@@ -1,0 +1,415 @@
+html {
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+body {
+    color: #404040;
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-size: 18px;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+p {
+    line-height: 1.5;
+    margin: 30px 0;
+}
+
+p a {
+/ / text-decoration : underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+}
+
+a {
+    color: #404040;
+}
+
+a:hover,
+a:focus {
+    color: #0085a1;
+}
+
+a img:hover,
+a img:focus {
+    cursor: zoom-in;
+}
+
+blockquote {
+    color: #808080;
+    font-style: italic;
+}
+
+hr.small {
+    max-width: 100px;
+    margin: 15px auto;
+    border-width: 4px;
+    border-color: #fff;
+    box-shadow: 0 0 15px 1px #333;
+}
+
+footer {
+    bottom: 0;
+    height: -60px;
+    position: absolute;
+    width: 100%;
+}
+
+footer .copyright {
+    font-size: 14px;
+    text-align: center;
+}
+
+::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background: #0085a1;
+}
+
+::selection {
+    color: white;
+    text-shadow: none;
+    background: #0085a1;
+}
+
+img::selection {
+    color: white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+body {
+    webkit-tap-highlight-color: #0085a1;
+}
+
+.navbar-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 800;
+    text-shadow: 1px 1px 5px #eee;
+}
+
+.navbar-custom .nav li a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px #eee;
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar-custom {
+        background: transparent;
+        border-bottom: 1px solid transparent;
+    }
+
+    .navbar-custom .navbar-brand {
+        color: white;
+        padding: 20px;
+        text-shadow: 1px 1px 5px #333;
+    }
+
+    .navbar-custom .navbar-brand:hover,
+    .navbar-custom .navbar-brand:focus {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .navbar-custom .nav li a {
+        color: white;
+        padding: 20px;
+        padding-bottom: 5px;
+        text-shadow: 1px 1px 5px #333;
+    }
+
+    .navbar-custom .nav li.active a,
+    .navbar-custom .nav li.active a:hover,
+    .navbar-custom .nav li.active a:focus {
+        color: #fff;
+        background-color: transparent;
+        border-bottom: 5px solid #fff;
+    }
+
+    .navbar-custom .nav li a:hover,
+    .navbar-custom .nav li a:focus {
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .navbar-custom {
+        -webkit-transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+        /* Force Hardware Acceleration in WebKit */
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .navbar-custom.is-fixed {
+        /* when the user scrolls down, we hide the header right above the viewport */
+        position: fixed;
+        top: -61px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-bottom: 1px solid #f2f2f2;
+        -webkit-transition: -webkit-transform 0.3s;
+        -moz-transition: -moz-transform 0.3s;
+        transition: transform 0.3s;
+    }
+
+    .navbar-custom.is-fixed .navbar-brand {
+        color: #404040;
+        text-shadow: none;
+    }
+
+    .navbar-custom.is-fixed .navbar-brand:hover,
+    .navbar-custom.is-fixed .navbar-brand:focus {
+        color: #0085a1;
+    }
+
+    .navbar-custom.is-fixed .nav li a {
+        color: #404040;
+        text-shadow: none;
+    }
+
+    .navbar-custom.is-fixed .nav li a:hover,
+    .navbar-custom.is-fixed .nav li a:focus {
+        color: #0085a1;
+    }
+
+    .navbar-custom.is-visible {
+        /* if the user changes the scrolling direction, we show the header */
+        -webkit-transform: translate3d(0, 100%, 0);
+        -moz-transform: translate3d(0, 100%, 0);
+        -ms-transform: translate3d(0, 100%, 0);
+        -o-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+.intro-header {
+    background-color: #808080;
+    background: no-repeat center center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-bottom: 50px;
+}
+
+.intro-header .site-heading,
+.intro-header .review-heading,
+.intro-header .page-heading {
+    padding: 100px 0 50px;
+    color: #fff;
+    text-shadow: 1px 2px 5px #333;
+}
+
+@media only screen and (min-width: 768px) {
+    .intro-header .site-heading,
+    .intro-header .review-heading,
+    .intro-header .page-heading {
+        padding: 150px 0;
+    }
+}
+
+.intro-header .site-heading,
+.intro-header .page-heading {
+    text-align: center;
+}
+
+.intro-header .site-heading h1,
+.intro-header .page-heading h1 {
+    margin-top: 0;
+    font-size: 50px;
+}
+
+.intro-header .site-heading .subheading,
+.intro-header .page-heading .subheading {
+    font-size: 24px;
+    line-height: 1.1;
+    display: block;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 10px 0 0;
+
+}
+
+@media only screen and (min-width: 768px) {
+    .intro-header .site-heading h1,
+    .intro-header .page-heading h1 {
+        font-size: 80px;
+    }
+}
+
+.intro-header .review-heading h1 {
+    font-size: 35px;
+}
+
+.intro-header .review-heading .subheading,
+.intro-header .review-heading .meta {
+    line-height: 1.1;
+    display: block;
+}
+
+.intro-header .review-heading .subheading {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    margin: 10px 0 30px;
+    font-weight: 600;
+}
+
+.intro-header .review-heading .meta {
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.intro-header .review-heading .meta a {
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    .intro-header .review-heading h1 {
+        font-size: 55px;
+    }
+
+    .intro-header .review-heading .subheading {
+        font-size: 30px;
+    }
+}
+
+.btn {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 0;
+    padding: 15px 25px;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    background-color: #0085a1;
+    border: 1px solid #0085a1;
+    color: white;
+}
+
+.file-input .btn,
+.input-group .btn {
+    padding: 6px 12px;
+}
+
+.form-control {
+    font-size: 18px;
+}
+
+.review-preview > a {
+    color: #404040;
+}
+
+.review-preview > a:hover,
+.review-preview > a:focus {
+    text-decoration: none;
+    color: #0085a1;
+}
+
+.review-preview > a > .review-title {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.review-preview > a > .review-subtitle {
+    margin: 0;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.review-preview > .review-meta {
+    color: #808080;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.review-preview > .review-meta > a {
+    text-decoration: none;
+    color: #404040;
+}
+
+.review-preview > .review-meta > a:hover,
+.review-preview > .review-meta > a:focus {
+    color: #0085a1;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+    .review-preview > a > .review-title {
+        font-size: 36px;
+    }
+}
+
+#modal-form .modal-content {
+    padding: 20px;
+}
+
+#preloader {
+    border-radius: 50%;
+    bottom: 0;
+    height: 48px;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 48px;
+    z-index: 9999;
+}
+
+.author-info p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.author-info a {
+    border-bottom: 1px dashed #000;
+}
+
+.author-info a:focus,
+.author-info a:hover,
+.author-info a:active {
+    text-decoration: none;
+}
+
+.author-info__label {
+    text-align: right;
+}
